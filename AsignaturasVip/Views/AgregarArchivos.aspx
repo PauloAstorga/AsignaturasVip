@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AgregarArchivos.aspx.cs" Inherits="AsignaturasVip.Views.AgregarArchivos" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AgregarArchivos.aspx.cs" Inherits="AsignaturasVip.Views.AgregarArchivos" %>--%>
 
 <!DOCTYPE html>
 
