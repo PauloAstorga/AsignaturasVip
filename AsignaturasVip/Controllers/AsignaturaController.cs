@@ -10,15 +10,22 @@ namespace AsignaturasVip.Controllers
     {
         public static List<Asignatura> listAsignaturas = new List<Asignatura>();
 
-        public static string AddAsignatura(string id, string nombre, Unidad unidad)
+        public static string AddAsignatura(string id, string nombre, string unidad)
         {
             try
             {
-                int idAsignatura = int.Parse(id);
-
-                Asignatura asignatura = new Asignatura(idAsignatura, nombre, unidad);
-                listAsignaturas.Add(asignatura);
-                return "La asignatura se guardó exitosamente";
+                Unidad unity = UnidadController.Find(int.Parse(id));
+                if (unity != null)
+                {
+                    int idAsignatura = int.Parse(id);
+                    Asignatura asignatura = new Asignatura(idAsignatura, nombre, unity);
+                    listAsignaturas.Add(asignatura);
+                    return "La asignatura se guardó exitosamente";
+                }
+                else
+                {
+                    return "error";
+                }
             }
             catch (Exception ex)
             {
@@ -26,6 +33,7 @@ namespace AsignaturasVip.Controllers
                 throw;
             }
         }
+
 
         public static Asignatura Find(string id)
         {
@@ -96,7 +104,7 @@ namespace AsignaturasVip.Controllers
 
             if (listAsignaturas.Count < 1)
             {
-                AddAsignatura("1", "Programación Web", new Unidad() { Id = 1, Nombre = "Diseño con CSS", Objetivos = "Diseñar Páginas web y darles estilo"});
+                AddAsignatura("1", "Programación Web", "1");
                
 
             }

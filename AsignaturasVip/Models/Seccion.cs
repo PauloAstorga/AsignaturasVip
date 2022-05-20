@@ -9,20 +9,20 @@ namespace AsignaturasVip.Models
     {
         private int id;
         private string nombre;
-        private Asignatura asignatura;
+        private Asignatura asig;
 
         public Seccion(int id, string nombre, Asignatura asignatura)
         {
             this.id = id;
             this.nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
-            this.asignatura = asignatura ?? throw new ArgumentNullException(nameof(asignatura));
+            this.asig = asignatura ?? throw new ArgumentNullException(nameof(asig));
         }
 
 
         public Asignatura Asig
         {
-            get { return asignatura; }
-            set { asignatura = value; }
+            get { return asig; }
+            set { asig = value; }
         }
 
 

@@ -21,7 +21,6 @@ namespace AsignaturasVip.Views
             DropAsignatura.DataSource = from a in AsignaturaController.FindAll()
                                         select new
                                         {
-
                                            Id = a.Id,
                                            Nombre = a.Nombre
                                           

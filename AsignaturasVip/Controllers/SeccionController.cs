@@ -10,15 +10,22 @@ namespace AsignaturasVip.Controllers
     {
         public static List<Seccion> listaSecciones = new List<Seccion>();
 
-        public static string AddSeccion(string id, string nombre, Asignatura asignatura)
+        public static string AddSeccion(string id, string nombre, string asignatura)
         {
             try
             {
                 int idSeccion = int.Parse(id);
-
-                Seccion seccion = new Seccion(idSeccion, nombre, asignatura);
-                listaSecciones.Add(seccion);
-                return "El archivo se guardó exitosamente";
+                Asignatura asig = AsignaturaController.Find(id);
+                if (asig != null)
+                {
+                    Seccion seccion = new Seccion(idSeccion, nombre, asig);
+                    listaSecciones.Add(seccion);
+                    return "La Seccion se guardó exitosamente";
+                }
+                else
+                {
+                    return "Error";
+                }
             }
             catch (Exception ex)
             {

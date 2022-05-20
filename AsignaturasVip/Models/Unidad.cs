@@ -10,13 +10,7 @@ namespace AsignaturasVip.Models
         private int id;
         private string nombre;
         private string objetivos;
-        private Archivo archivo;
 
-        public Archivo Archive
-        {
-            get { return archivo; }
-            set { archivo = value; }
-        }
 
 
         public string Objetivos
