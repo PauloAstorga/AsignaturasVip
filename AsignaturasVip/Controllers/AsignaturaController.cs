@@ -70,6 +70,11 @@ namespace AsignaturasVip.Controllers
                 throw;
             }
         }
+        public static List<Asignatura> FindAll()
+        {
+            return listAsignaturas;
+        }
+
 
         public static string DeleteAsignatura(string id)
         {
@@ -84,6 +89,16 @@ namespace AsignaturasVip.Controllers
             {
                 return "Error al eliminar la asignatura";
                 throw;
+            }
+        }
+        public static void PrecargaAsignaturas()
+        {
+
+            if (listAsignaturas.Count < 1)
+            {
+                AddAsignatura("1", "Programación Web", new Unidad() { Id = 1, Nombre = "Diseño con CSS", Objetivos = "Diseñar Páginas web y darles estilo"});
+               
+
             }
         }
     }

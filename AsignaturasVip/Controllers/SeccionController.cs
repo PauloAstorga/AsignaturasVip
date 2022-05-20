@@ -10,13 +10,13 @@ namespace AsignaturasVip.Controllers
     {
         public static List<Seccion> listaSecciones = new List<Seccion>();
 
-        public static string AddSeccion(string id, string nombre, Asignatura asignatura, Nota nota)
+        public static string AddSeccion(string id, string nombre, Asignatura asignatura)
         {
             try
             {
                 int idSeccion = int.Parse(id);
 
-                Seccion seccion = new Seccion(idSeccion, nombre, asignatura, nota);
+                Seccion seccion = new Seccion(idSeccion, nombre, asignatura);
                 listaSecciones.Add(seccion);
                 return "El archivo se guardó exitosamente";
             }
@@ -49,7 +49,7 @@ namespace AsignaturasVip.Controllers
             return null;
         }
 
-        public static string EditSeccion(string id, string nombre, Asignatura asignatura, Nota nota)
+        public static string EditSeccion(string id, string nombre, Asignatura asignatura)
         {
             try
             {
@@ -57,7 +57,6 @@ namespace AsignaturasVip.Controllers
 
                 seccion.Nombre = nombre;
                 seccion.Asig = asignatura;
-                seccion.Note = nota;
                 return "Sección modificada exitosamente";
             }
             catch (Exception ex)

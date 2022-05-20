@@ -121,8 +121,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\AgregarArchivos.aspx" />
+    <Content Include="Views\AgregarAsignaturas.aspx" />
     <Content Include="Views\AgregarSecciones.aspx" />
     <Content Include="Views\IniciarSesion.aspx" />
+    <Content Include="Views\ListadoAsignatura.aspx" />
+    <Content Include="Views\ListadoSecciones.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +155,13 @@
     <Compile Include="Views\AgregarArchivos.aspx.designer.cs">
       <DependentUpon>AgregarArchivos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\AgregarAsignaturas.aspx.cs">
+      <DependentUpon>AgregarAsignaturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AgregarAsignaturas.aspx.designer.cs">
+      <DependentUpon>AgregarAsignaturas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AgregarSecciones.aspx.cs">
       <DependentUpon>AgregarSecciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +175,20 @@
     </Compile>
     <Compile Include="Views\IniciarSesion.aspx.designer.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListadoAsignatura.aspx.cs">
+      <DependentUpon>ListadoAsignatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ListadoAsignatura.aspx.designer.cs">
+      <DependentUpon>ListadoAsignatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListadoSecciones.aspx.cs">
+      <DependentUpon>ListadoSecciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ListadoSecciones.aspx.designer.cs">
+      <DependentUpon>ListadoSecciones.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
