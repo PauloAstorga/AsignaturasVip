@@ -1,0 +1,4 @@
+Primera versión
+Clases creadas y controladores creados.
+Segunda versión
+Manejo de sesiones y formularios.
